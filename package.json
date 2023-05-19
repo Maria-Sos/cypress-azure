@@ -1,0 +1,15 @@
+{
+  "name": "cypres_azure",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open",
+    "test:run": "npx cypress run --browser chrome --spec cypress/e2e/1-getting-started"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.12.0"
+  }
+}
