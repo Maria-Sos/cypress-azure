@@ -1,12 +1,10 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
-  integrationFolder: "cypress/integration/examples",
-  reporter: "junit",
+  video: false,
+  reporter: 'junit',
   reporterOptions: {
-    mochaFile: "tests/test-output-[hash].xml",
-    toConsole: true,
-    attachments: true
+    mochaFile: 'results/my-test-output-[hash].xml'
   },
   e2e: {
     setupNodeEvents(on, config) {

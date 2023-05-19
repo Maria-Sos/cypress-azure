@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress open",
-    "test:run": "npx cypress run --browser chrome --spec cypress/e2e/1-getting-started"
+    "test:open": "npx cypress open",
+    "test:run": "npx cypress run --browser chrome --spec cypress/e2e/1-getting-started",
+    "delete:reports": "rm results/* || true",
+    "test": "npm run test:run --reporter junit \\\n  --reporter-options \"mochaFile=results/my-test-output.xml,toConsole=true\""
   },
   "author": "",
   "license": "ISC",
